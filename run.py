@@ -15,11 +15,11 @@ def criar_nova_janela(script):
 
 def ler_libras():
     label_resultado.config(text="Opção selecionada: Ler Libras")
-    criar_nova_janela("lerLibra.py")
+    criar_nova_janela("pages/lerLibra.py")
 
 def gravar_libras():
     label_resultado.config(text="Opção selecionada: Gravar Libras")
-    criar_nova_janela("gravavideo.py")
+    criar_nova_janela("pages/gravavideo.py")
 
 # Criar janela
 janela = tk.Tk()
