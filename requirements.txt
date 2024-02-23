@@ -1,0 +1,6 @@
+opencv-python
+PySimpleGUI
+tk
+mediapipe
+cmake
+face_recognition
