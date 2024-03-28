@@ -1,6 +1,4 @@
 opencv-python
-PySimpleGUI
-tk
 mediapipe
-cmake
-face_recognition
+scikit-learn
+numpy
