@@ -34,7 +34,16 @@ def detectar_letra_mao(modelo, mp_hands, image):
 
 def main():
     mp_hands = mp.solutions.hands.Hands(static_image_mode=False, max_num_hands=1)
-    cap = cv2.VideoCapture(0)
+    
+    # Tentar abrir diferentes câmeras
+    for camera_index in range(3):  # Tentar até 3 câmeras
+        cap = cv2.VideoCapture(camera_index)
+        if cap.isOpened():
+            break  # Sai do loop se uma câmera for encontrada
+
+    if not cap.isOpened():
+        print("Nenhuma câmera encontrada.")
+        return
 
     amostras, rotulos = carregar_dados_treinamento('dados_treinamento.json')
     modelo = treinar_modelo(amostras, rotulos)
